@@ -1,0 +1,119 @@
+%! TEX program = lualatex
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.0.1, 11 September 2016) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,letterpaper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%%
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you'll need to install
+%% Academicons.ttf in your operating system's font %% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1.5cm,right=8.3cm,marginparwidth=5.8cm,marginparsep=1cm,top=1.6cm,bottom=1.6cm}
+
+% Change the font if you want to.
+\setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkBlue}{HTML}{1c304b}
+\definecolor{LightBlue}{HTML}{2079c7}
+\definecolor{GreenBlue}{HTML}{3ec2ac}
+\definecolor{Purple}{HTML}{4e5266}
+\definecolor{DarkPurple}{HTML}{1E2037}
+\definecolor{LightPurple}{HTML}{656dba}
+%\colorlet{heading}{VividPurple}
+\colorlet{heading}{DarkPurple}
+\colorlet{heading-line}{GreenBlue}
+\colorlet{accent}{Purple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{LIZA PRESSMAN}
+\tagline{Software Engineer}
+\photo{6cm}{}
+% Cropped to square from my github page
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \begin{flushright}
+    \normalsize
+    \email{\href{mailto:lpressma@u.rochester.edu}{lpressma@u.rochester.edu}}
+    \phone{\href{tel:5104100565}{(510) 410-0565}}
+    \homepage{\href{https://lizapressman.com}{lizapressman.com}}
+    \github{\href{https://github.com/lizapressman}{lizapressman}}
+  \end{flushright}
+}
+
+%% Make the header extend all the way to the right, if you want. Extend the right margin by 8cm (=6.8cm marginparwidth + 1.2cm marginparsep)
+\begin{adjustwidth}{}{-8cm}
+\makecvheader
+\end{adjustwidth}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Education}
+
+\cveducation{University of Rochester}{B.A. in Computer Science, Mathematics, and Studio Arts }{2017-2021}{GPA 3.71 out of 4.00 (Dean’s List, Dean’s Scholar)}
+
+\cvsection{Experience}
+
+\cvexperience{https://target.com/}{Target}{Software Engineering Intern}{June 2020 -- PRESENT}
+{Working on the Purchase Orders Team developing with Java, Springboot, React, and Redux}
+
+\cvexperience{https://www.doctorplan.com}{DoctorPlan}{Software Engineering Intern}{June 2019 -- August 2019}
+{Worked on doctor facing tools
+\begin{itemize}
+\item Used Java to gather and summarize patient data and optimize visual display for surgeons’ use
+\item Used Javascript to convert data to natural language
+\item Used Vue.js to develop a questionnaire web application
+\end{itemize}}
+
+\cvexperience{https://www.startupwonder.com/}{Startup Wonder}{Instructor}{July 2018 -- August 2018}
+{Taught and designed curriculum for summer camp sessions focused on programming and entrepreneurship}
+
+\cvexperience{https://www.lafayetteacademyno.org/}{Lafayette Academy}{Mathematics Tutor}{June 2018 -- July 2018}
+
+
+\cvsection{Projects}
+
+\nocite{*}
+
+\cvproject{ResumeToWebsite}{\href{https://github.com/lizapressman/ResumeToWebsite}{github.com/lizapressman/ResumeToWebsite}}{Resume Parser that produces a resulting html portfolio site based on the resume.}{Python}
+
+\cvproject{Therapy Journaling Application}{\href{https://github.com/Mayshinlyan/TherapyJournalling}{github.com/Mayshinlyan/TherapyJournalling}}{Application using MERN stack for personalized journaling with automated feedback based on mood \& text analysis}{MERN}
+
+\cvproject{Dijkstra’s Algorithm}{}{Implemented a program using java graphics to find the shortest path between any two points in New York State}{Java}
+
+\cvproject{Connect Four AI }{}{Implemented a minimax algorithm along with a heuristic function and alpha-beta pruning (with a fixed depth cutoff)}{Java}
+
+\end{document}
