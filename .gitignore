@@ -5,3 +5,4 @@
 *.bcf
 *.out
 *.run.xml
+.DS_Store
